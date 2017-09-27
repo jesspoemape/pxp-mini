@@ -26,9 +26,10 @@ const Image = styled.div`
     background: url('${filler2}');
     background-size: cover;
     height: 100px;
+    width: 100%;
 `
 const Title = styled.div`
-    text-trasnform: uppercase;
+    text-transform: uppercase;
     color: #995599;
     font-size: 16px;
     padding: 5px 0;
@@ -39,7 +40,7 @@ const Blurb = styled.div`
     font-size: 10px;
     display: flex;
     text-align: left;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 `
 const ReadMoreButton = styled.div`
     width: 50px;
@@ -49,6 +50,8 @@ const ReadMoreButton = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 7px;
+    margin-bottom: 15px;
+    color: #995599;
 
     border: 3px solid transparent;
     -moz-border-image: -moz-linear-gradient(left, #4C1683 0%, #BE10B7 100%);
