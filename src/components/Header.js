@@ -6,7 +6,7 @@ import women from './../assets/three-women.jpg';
 import search from './../assets/search.svg';
 import ham from './../assets/ham.svg';
 
-const Header = () => {
+const Header = ({title, button}) => {
     return (
         <MainContainer>
             <MenuContainer>
@@ -26,8 +26,8 @@ const Header = () => {
                     </SearchButton>
                 </LeftInnerContainer>
             </MenuContainer>
-            <Title>Latest Article Title</Title>
-            <ReadMoreButton>Read More</ReadMoreButton>
+            <Title>{title}</Title>
+            {button? <ReadMoreButton>Read More</ReadMoreButton> : null}
         </MainContainer>
     );
 };

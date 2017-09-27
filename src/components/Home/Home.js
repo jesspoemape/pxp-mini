@@ -10,7 +10,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header title={'Latest Article Title'} button={true}/>
                 <ArticlesContainer />
                 <LoadMoreBar />
                 <AboutUsContainer />
