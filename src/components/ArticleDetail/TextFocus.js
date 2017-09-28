@@ -29,8 +29,12 @@ const Media = styled.div`
     margin-right: 23px;
 `
 const Text = styled.div`
-    font-size: 24px;
+    font-size: 26px;
     text-align: left;
     color: #7D277D;
     line-height: 32px;
+
+    @media (max-width: 550px) {
+        font-size: 22px;
+  }
 `

@@ -1,20 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import ReactSVG from 'react-svg';
 import {Link} from 'react-router-dom';
 
 import women from './../assets/three-women.jpg';
-import ham from './../assets/ham.svg';
 
 import SearchBar from './SearchBar';
+import Hamburger from './Hamburger';
 
 const Header = ({title, button, left}) => {
     return (
         <MainContainer>
             <MenuContainer>
-                <HamContainer>
-                    <HamIcon path={ham} />
-                </HamContainer>
+                <Hamburger />
                 <RightInnerContainer>
                     <FreshLink to='/'><MenuOption>Home Page</MenuOption></FreshLink>
                     <FreshLink to='/about'><MenuOption>About</MenuOption></FreshLink>
@@ -45,6 +42,7 @@ const MainContainer = styled.div`
 
 const Title = styled.div`
     text-transform: uppercase;
+    width: 100%;
     color: white;
     font-size: ${props => props.left ? '75px' : '55px'};
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
@@ -114,12 +112,6 @@ const LeftMenuOption = styled(MenuOption)`
     margin-right: 3px;
 `
 
-const Icon = styled(ReactSVG)`
-    stroke: white;
-    fill: white;
-    width: 14px;
-`
-
 const ReadMoreButton = styled.div`
     width: 150px;
     height: 30px;
@@ -144,33 +136,6 @@ const ReadMoreButton = styled.div`
         -webkit-border-image: -webkit-linear-gradient(left, #4C1683 0%, #BE10B7 100%);
         border-image: linear-gradient(to right, #4C1683 0%, #BE10B7 100%);
         border-image-slice: 1;
-    }
-`
-const HamContainer = styled.div`
-    background: #4C1683; 
-    background: -webkit-linear-gradient(#4C1683, #6C1476);
-    background: -o-linear-gradient(#4C1683, #6C1476); 
-    background: -moz-linear-gradient(#4C1683, #6C1476); 
-    background: linear-gradient(#4C1683, #6C1476); 
-    border: 1px solid #89718E;
-    color: white;
-    display: none;
-    align-items: center;
-    font-size: 12px;
-    padding: 5px 10px;
-    margin: 15px;
-
-    @media (max-width: 770px) {
-        display: flex;
-        align-self: flex-end;
-    }
-`
-const HamIcon = styled(Icon)`
-    width: 25px;
-    display: none;
-
-    @media (max-width: 770px) {
-        display: block;
     }
 `
 const FreshLink = styled(Link)`
