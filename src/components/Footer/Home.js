@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SocialContainer from './SocialContainer';
-
+import LinksContainer from './LinksContainer';
 
 const Home = () => {
     return (
@@ -17,13 +17,7 @@ const Home = () => {
                 can. In its labs and factories and on the ground with customers, GE is inventing the next industrial era to move, 
                 power, build and cure the world. www.ge.com
             </Disclaimer>
-            <LinksContainer>
-                <LinkText>Privacy</LinkText>
-                <LinkText>Cookie Policy</LinkText>
-                <LinkText>Terms and Conditions</LinkText>
-                <LinkText>GE Healthcare Website</LinkText>
-                <LinkText>© 2017 General Electric Company</LinkText>
-            </LinksContainer>
+            <LinksContainer />
         </Main>
     );
 };
@@ -55,30 +49,6 @@ const Main = styled.div`
     text-align-center;
     font-weight: 100;
     margin-bottom: 27px;
- `
- const LinkText = styled.div`
-    color: white;
-    font-size: 14px;
-    font-weight: 100;
-    padding: 0px 5px;
- `
- const LinksContainer = styled.div`
-    display: flex;
-    justify-content: center;
-
-    >div {
-        border-right: 1px solid white;
-    };
-
-    :nth-child(5) {
-        border-right: none;
-    };
-
-    @media (max-width: 800px) {
-       flex-wrap: wrap;
-       align-self: center;
-       max-width: 600px;
-    };
  `
  const LogoContainer = styled.div`
     color: #8E9193;
