@@ -26,7 +26,7 @@ const ArticleDetail = () => {
 export default ArticleDetail;
 
 const Main = styled.div`
-
+    position: relative;
 `
 const ContentContainer = styled.div`
     display: flex;

@@ -68,6 +68,7 @@ const Text = styled.div`
     font-size: 24px;
     color: #7E2A7E;
     padding-bottom: 15px;
+    text-align: center;
 
     @media (max-width: 770px) {
        font-size: 19px;
@@ -91,6 +92,7 @@ const SubTextContainer = styled.div`
     color: #A9ABAD;
     font-weight: 100;
     line-height: 26px;
+    text-align: center;
 
     @media (max-width: 770px) {
        font-size: 14px;

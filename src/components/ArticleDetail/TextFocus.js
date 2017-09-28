@@ -35,6 +35,6 @@ const Text = styled.div`
     line-height: 32px;
 
     @media (max-width: 550px) {
-        font-size: 22px;
+        font-size: 20px;
   }
 `
