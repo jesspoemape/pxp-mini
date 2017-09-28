@@ -42,7 +42,11 @@ const Main = styled.div`
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
-    margin-right: 315px;
+    margin-right: 25%;
+
+    @media (max-width: 770px) {
+        margin-right: 30px;
+    }
 `
 const Text = styled.div`
     color: white;

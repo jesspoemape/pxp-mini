@@ -11,7 +11,7 @@ import ArticlesContainer from './ArticlesContainer';
 const ArticleDetail = () => {
     return (
         <Main>
-            <Header title={'Article Title'}/>
+            <Header title={'Article Title'} left={true}/>
             <ContentContainer>
                 <Content />
                 <Sidebar />

@@ -24,6 +24,10 @@ const Main = styled.div`
     padding-left: 30px;
     margin-top: 15px;
     border-left: 1px solid #E5E5E5;
+    
+    @media (max-width: 770px) {
+        display: none;
+    }
 `
 const Header = styled.div`
     text-transform: uppercase;

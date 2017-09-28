@@ -19,7 +19,7 @@ export default SidebarTile;
 const Main = styled.div`
     display: flex;
     flex-direction: column;
-    width: 160px;
+    width: 80%;
     align-items: flex-start;
 `
 const Image = styled.div`

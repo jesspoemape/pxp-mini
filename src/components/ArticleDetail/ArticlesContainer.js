@@ -17,4 +17,9 @@ export default ArticlesContainer;
 
 const MainContainer = styled.div`
     display: flex;
+    width: 100%;
+
+    @media (max-width: 770px) {
+        flex-wrap: wrap;
+    }
 `

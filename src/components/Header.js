@@ -6,7 +6,7 @@ import women from './../assets/three-women.jpg';
 import search from './../assets/search.svg';
 import ham from './../assets/ham.svg';
 
-const Header = ({title, button}) => {
+const Header = ({title, button, left}) => {
     return (
         <MainContainer>
             <MenuContainer>
@@ -26,7 +26,7 @@ const Header = ({title, button}) => {
                     </SearchButton>
                 </LeftInnerContainer>
             </MenuContainer>
-            <Title>{title}</Title>
+            <Title left={left}>{title}</Title>
             {button? <ReadMoreButton>Read More</ReadMoreButton> : null}
         </MainContainer>
     );
@@ -46,12 +46,13 @@ const MainContainer = styled.div`
 const Title = styled.div`
     text-transform: uppercase;
     color: white;
-    font-size: 55px;
+    font-size: ${props => props.left ? '75px' : '55px'};
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: #501891;
-   padding-bottom: 40px;
-   padding-top: 200px;
+   padding: ${props => props.left ? '270px 0 0 60px' : '200px 0 40px 0'};
+   text-align: ${props => props.left ? 'left' : 'center'};
+
 
    @media (max-width: 770px) {
         padding: 100px 40px 40px 40px;

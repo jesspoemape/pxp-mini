@@ -46,6 +46,10 @@ const Main = styled.div`
     display: flex;
     flex-direction: column;
     padding-right: 45px;
+
+    @media (max-width: 770px) {
+        width: 100%;
+    }
 `
 const Blurb = styled.div`
     font-size: 20px;

@@ -23,6 +23,11 @@ const Main = styled.div`
     padding: 40px 60px;
     background: url('${filler1}');
     background-size: cover;
+    width: 33%;
+
+    @media (max-width: 770px) {
+        width: 100%;
+    }
 `
 const Filter = styled.div`
     width: 100%;
@@ -70,4 +75,10 @@ const ReadMoreButton = styled.div`
     -webkit-border-image: -webkit-linear-gradient(left, #4C1683 0%, #BE10B7 100%);
     border-image: linear-gradient(to right, #4C1683 0%, #BE10B7 100%);
     border-image-slice: 1;
+
+    @media (max-width: 770px) {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
 `
