@@ -6,6 +6,7 @@ import Footer from './../Footer/Home';
 import Content from './Content';
 import Sidebar from './Sidebar';
 import SocialFooter from './SocialFooter';
+import ArticlesContainer from './ArticlesContainer';
 
 const ArticleDetail = () => {
     return (
@@ -16,6 +17,7 @@ const ArticleDetail = () => {
                 <Sidebar />
             </ContentContainer>
             <SocialFooter />
+            <ArticlesContainer/>
             <Footer />
         </Main>
     );
