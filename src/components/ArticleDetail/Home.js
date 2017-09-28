@@ -5,6 +5,7 @@ import Header from './../Header';
 import Footer from './../Footer/Home';
 import Content from './Content';
 import Sidebar from './Sidebar';
+import SocialFooter from './SocialFooter';
 
 const ArticleDetail = () => {
     return (
@@ -14,6 +15,7 @@ const ArticleDetail = () => {
                 <Content />
                 <Sidebar />
             </ContentContainer>
+            <SocialFooter />
             <Footer />
         </Main>
     );
