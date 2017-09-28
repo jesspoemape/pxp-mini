@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 import filler2 from './../../assets/filler2.jpg';
 
@@ -9,7 +10,7 @@ const SidebarTile = () => {
             <Image />
             <Title>Article Title</Title>
             <Blurb>You may be receiving questions from your patients and colleagues</Blurb>
-            <ReadMoreButton>Read More</ReadMoreButton>
+            <FreshLink to='/article'><ReadMoreButton>Read More</ReadMoreButton></FreshLink>
         </Main>
     );
 };
@@ -58,4 +59,7 @@ const ReadMoreButton = styled.div`
     -webkit-border-image: -webkit-linear-gradient(left, #4C1683 0%, #BE10B7 100%);
     border-image: linear-gradient(to right, #4C1683 0%, #BE10B7 100%);
     border-image-slice: 1;
+`
+const FreshLink = styled(Link)`
+    text-decoration: none;
 `

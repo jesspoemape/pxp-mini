@@ -8,7 +8,7 @@ import ArticleTileV2 from './Home/ArticleTileV2';
 const ArticlesContainer = () => {
     return (
         <MainContainer>
-            <ArticleTileV1 />
+             <ArticleTileV1 />
             <ArticleTileV1 />
             <ArticleTileV2 />
             <ArticleTileV2 />
@@ -21,5 +21,8 @@ export default ArticlesContainer;
 const MainContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+
 `
+
 

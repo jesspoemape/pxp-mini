@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 import filler1 from './../../assets/filler1.jpg';
 
@@ -9,7 +10,7 @@ const ArticleTile = () => {
             <Filter />
             <Title>Article Title</Title>
             <Blurb>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</Blurb>
-            <ReadMoreButton>Read More</ReadMoreButton>
+           <FreshLink to='/article'><ReadMoreButton>Read More</ReadMoreButton></FreshLink>
         </Main>
     );
 };
@@ -81,4 +82,8 @@ const ReadMoreButton = styled.div`
         height: 30px;
         font-size: 12px;
     }
+`
+const FreshLink = styled(Link)`
+    text-decoration: none;
+    z-index: 1;
 `

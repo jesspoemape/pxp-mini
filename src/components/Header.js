@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import ReactSVG from 'react-svg';
+import {Link} from 'react-router-dom';
 
 import women from './../assets/three-women.jpg';
-import search from './../assets/search.svg';
 import ham from './../assets/ham.svg';
+
+import SearchBar from './SearchBar';
 
 const Header = ({title, button, left}) => {
     return (
@@ -14,20 +16,17 @@ const Header = ({title, button, left}) => {
                     <HamIcon path={ham} />
                 </HamContainer>
                 <RightInnerContainer>
-                    <MenuOption>Home Page</MenuOption>
-                    <MenuOption>About</MenuOption>
+                    <FreshLink to='/'><MenuOption>Home Page</MenuOption></FreshLink>
+                    <FreshLink to='/about'><MenuOption>About</MenuOption></FreshLink>
                 </RightInnerContainer>
                 <LeftInnerContainer>
                     <LeftMenuOption>Get Involved</LeftMenuOption>
                     <LeftMenuOption>Contact Us</LeftMenuOption>
                     <SearchBar />
-                    <SearchButton>
-                        <Icon path={search}/>
-                    </SearchButton>
                 </LeftInnerContainer>
             </MenuContainer>
             <Title left={left}>{title}</Title>
-            {button? <ReadMoreButton>Read More</ReadMoreButton> : null}
+            {button? <FreshLink to='/article'><ReadMoreButton>Read More</ReadMoreButton></FreshLink> : null}
         </MainContainer>
     );
 };
@@ -41,6 +40,7 @@ const MainContainer = styled.div`
     background-size: cover;
     display: flex;
     flex-direction: column;
+    align-items: center;
 `
 
 const Title = styled.div`
@@ -67,6 +67,7 @@ const Title = styled.div`
 const MenuContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
     @media (max-width: 770px) {
         justify-content: flex-end;
@@ -112,30 +113,7 @@ const LeftMenuOption = styled(MenuOption)`
     margin-left: 3px;
     margin-right: 3px;
 `
-const SearchBar = styled.input`
-    width: 125px;
-    border-radius: 12px;
-    height: 16px;
-    border: 1px solid gray;
-    margin-left: 3px;
-`
-const SearchButton = styled.div`
-    border-radius: 50%;
-    background: #4C1683; 
-    background: -webkit-linear-gradient(left, #4C1683, #A510AF);
-    background: -o-linear-gradient(left, #4C1683, #A510AF); 
-    background: -moz-linear-gradient(left, #4C1683, #A510AF); 
-    background: linear-gradient(left, #4C1683, #A510AF); 
-    height: 30px;
-    width: 30px;
-    position: relative;
-    right: 15px;
-    top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-`
+
 const Icon = styled(ReactSVG)`
     stroke: white;
     fill: white;
@@ -194,5 +172,8 @@ const HamIcon = styled(Icon)`
     @media (max-width: 770px) {
         display: block;
     }
+`
+const FreshLink = styled(Link)`
+    text-decoration: none;
 `
 

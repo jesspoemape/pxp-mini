@@ -15,8 +15,6 @@ const AboutTile = ({text, icon, subtext}) => {
         }
             return splitStr;
     }
-
-                    console.log(parsedText);
     return (
         <Main>
             <Icon path={icon}></Icon>

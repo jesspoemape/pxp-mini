@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 import filler1 from './../../assets/filler1.jpg';
 
@@ -9,7 +10,7 @@ const ArticleTileV1 = () => {
             <InfoContainer>
                 <Title>Article Title</Title>
                 <Blurb>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Blurb>
-                <ReadMoreButton>Read More</ReadMoreButton>
+                <FreshLink to='/article'><ReadMoreButton>Read More</ReadMoreButton></FreshLink>
             </InfoContainer>
             <Image />
         </MainContainer>
@@ -96,4 +97,8 @@ const Image = styled.div`
     background: url('${filler1}');
     background-size: cover;
     width: 50%;
+`
+
+const FreshLink = styled(Link)`
+    text-decoration: none;
 `
