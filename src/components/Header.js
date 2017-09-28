@@ -55,7 +55,8 @@ const Title = styled.div`
 
 
    @media (max-width: 770px) {
-        padding: 100px 40px 40px 40px;
+        padding: ${props => props.left ? '160px 0 0 0' : '100px 40px 40px 40px'};
+        text-align: center;
         font-size: 65px;
   }
   @media (max-width: 550px) {
